@@ -27,7 +27,7 @@ public interface IAsyncRepository<TEntity, TEntityId> :IQuery<TEntity>
     Task<ICollection<TEntity>> AddRangeAsync(ICollection<TEntity> entities);
     Task<ICollection<TEntity>> UpdateRangeAsync(ICollection<TEntity> entities);
     Task<GetAllModel<TEntity>> GetAllAsync(
-        Expression<Func<TEntity, bool>> predicate,
+        Expression<Func<TEntity, bool>>? predicate,
         Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null,
         Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null,
         bool withDeleted = false,

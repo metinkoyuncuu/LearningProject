@@ -26,7 +26,7 @@ public interface IRepository<TEntity,TentityId>:IQuery<TEntity>
     ICollection<TEntity> AddRange(ICollection<TEntity> entities);
     ICollection<TEntity> UpdateRange(ICollection<TEntity> entities);
     GetAllModel<TEntity> GetAll(
-        Expression<Func<TEntity,bool>> predicate,
+        Expression<Func<TEntity,bool>>? predicate,
         Func<IQueryable<TEntity>,IIncludableQueryable<TEntity,object>>? include=null,
         Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null,
         bool withDeleted=false,

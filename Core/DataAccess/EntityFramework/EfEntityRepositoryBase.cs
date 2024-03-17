@@ -185,7 +185,7 @@ public class EfEntityRepositoryBase<TEntity, TEntityId, TContext> : IAsyncReposi
     }
 
     public GetAllModel<TEntity> GetAll(
-        Expression<Func<TEntity, bool>> predicate, 
+        Expression<Func<TEntity, bool>>? predicate, 
         Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null,
         Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null,
         bool withDeleted = false,
@@ -208,7 +208,7 @@ public class EfEntityRepositoryBase<TEntity, TEntityId, TContext> : IAsyncReposi
        
     }
 
-    public async Task<GetAllModel<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> predicate, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, bool withDeleted = false, bool enableTracking = true, CancellationToken cancellationToken = default)
+    public async Task<GetAllModel<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>>? predicate, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, bool withDeleted = false, bool enableTracking = true, CancellationToken cancellationToken = default)
     {
         IQueryable<TEntity> queryable = Query();
         
