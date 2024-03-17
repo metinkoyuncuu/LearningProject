@@ -1,4 +1,6 @@
 ﻿
+using static Consolee.Program;
+
 namespace Consolee;
 
 public class MyNotes
@@ -174,7 +176,9 @@ public class MyNotes
           "geçebiliyoruz" +
           "Soyutlamanın en temel olayıdır" +
           "manager m = new manager(new x()) bir polymorphism dir";
-    internal class x
+
+    x myx = new();
+    internal class b
     {
         private int PrivateSayi = 1;
         protected int ProtectedSayi = 2;
@@ -184,7 +188,7 @@ public class MyNotes
         }
     }
     ;
-    class u : x
+    class u : b
     {
         public u()
         {
