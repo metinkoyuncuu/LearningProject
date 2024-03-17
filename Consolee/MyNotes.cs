@@ -189,7 +189,7 @@ public class MyNotes
         public u()
         {
             ProtectedSayi.ToString();
-            PrivateSayi//Bulunamıyo
+            //PrivateSayi//Bulunamıyo
     }
     }
 
