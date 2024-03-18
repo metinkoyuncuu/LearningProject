@@ -17,7 +17,7 @@ public static class AlgorithmQue3
 
         if(value1Value>value2Value)
         {
-            for (BigInteger i = value1Value; i <= value2Value; i--)
+            for (BigInteger i = value1Value; i >= value2Value; i--)
             {
                 for (double j = powValue; j < 0; j--)
                 {
@@ -28,13 +28,14 @@ public static class AlgorithmQue3
         }
         else if(value2Value>value1Value)
         {
-            for (BigInteger i = value2Value; i <= value1Value; i--)
+            for (BigInteger i = value2Value; i >= value1Value; i--)
             {
-                for (double j = powValue; j < 0; j--)
+                BigInteger bigInteger = i;
+                for (double j = powValue; j > 0; j--)
                 {
-                    i *= i;
+                    bigInteger *= bigInteger;
                 }
-                bigIntegers.Add(i);
+                bigIntegers.Add(bigInteger);
             }
         }
         
