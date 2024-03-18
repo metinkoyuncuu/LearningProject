@@ -20,6 +20,7 @@ public class AlgorithQue1
 				Value2 = new string('0', value1Length - value2Length) + Value2;
 			else if (value2Length > value1Length)
 				Value1 = new string('0', value2Length - value1Length) + Value1;
+			else if (value1Length == value2Length) {}
 			else
 				throw new Exception("Bir Sorun Oluştu");
 			
